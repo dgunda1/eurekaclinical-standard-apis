@@ -22,37 +22,37 @@ package org.eurekaclinical.standardapis.entity;
 
 /**
  *
- * @author arpost
+ * @author Dileep Gunda
  */
 public interface GroupEntity extends Entity<Long> {
 
     /**
-     * Get the role's identification number.
+     * Get the group's identification number.
      *
-     * @return A {@link Long} representing the role's id.
+     * @return A {@link Long} representing the group's id.
      */
     @Override
     Long getId();
 
     /**
-     * Get the role's name.
+     * Get the group's name.
      *
-     * @return A String containing the role's name.
+     * @return A String containing the group's name.
      */
     String getName();
 
     /**
-     * Set the role's identification number.
+     * Set the group's identification number.
      *
-     * @param inId The number representing the role's id.
+     * @param inId The number representing the group's id.
      */
     @Override
     void setId(Long inId);
 
     /**
-     * Set the role's name.
+     * Set the group's name.
      *
-     * @param inName A string containing the role's name.
+     * @param inName A string containing the group's name.
      */
     void setName(String inName);
     
