@@ -50,14 +50,19 @@ public class RolesFromDbFilter extends AbstractRolesFilter {
         UserEntity<? extends RoleEntity> user = this.userDao.getByPrincipal(principal);
         if (user != null) {
             List<? extends RoleEntity> roles = user.getRoles();
-            String[] roleNames = new String[roles.size()];
-            int i = 0;
-            for (RoleEntity re : roles) {
-                roleNames[i++] = re.getName();
+            if(roles.size() !=0){
+	            String[] roleNames = new String[roles.size()];
+	            int i = 0;
+	            for (RoleEntity re : roles) {
+	                roleNames[i++] = re.getName();
+	            }
+	            return roleNames;
             }
-            return roleNames;
+            else {
+            	return EMPTY_STRING_ARRAY;
+            }
         } else {
-            return EMPTY_STRING_ARRAY;
+            return null;
         }
 
     }
