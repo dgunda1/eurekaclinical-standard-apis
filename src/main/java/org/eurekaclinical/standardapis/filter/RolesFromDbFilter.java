@@ -46,10 +46,10 @@ public class RolesFromDbFilter extends AbstractRolesFilter {
     }
     
     /**
-    * The getRoles methos will now return 
-    * Null if UserObject not found ,
-    * EMPTY_ARRAY if user found and dont have any associated roles and
-    * String Array if user found and have associated roles.
+    * The getRoles method will now return 
+    * Null if UserObject not found,
+    * EMPTY_ARRAY if the user found and don't have any associated roles and
+    * String Array if the user found and have associated roles.
     * @return Array of Roles, empth array if no roles associated and Null if User not found
     * @author  Dileep Gunda
     * @since   06-11-18 
