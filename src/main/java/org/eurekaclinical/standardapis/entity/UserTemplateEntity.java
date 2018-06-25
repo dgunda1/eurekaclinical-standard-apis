@@ -41,6 +41,7 @@ public interface UserTemplateEntity<R extends RoleEntity> extends Entity<Long> {
      * @return A list of roles assigned to the user.
      */
     List<R> getRoles();
+    
 
     /**
      * Set the user's unique identifier.
@@ -61,6 +62,26 @@ public interface UserTemplateEntity<R extends RoleEntity> extends Entity<Long> {
     
     void removeRole(R role);
     
+    /**
+	 * Sets criteria for triggering auto-authorization. May be 
+	 * <code>null</code>, which means that auto-authorization will always be 
+	 * triggered when requested.
+	 * 
+	 * @param criteria the criteria for triggering auto-authorization, 
+	 * expressed as a Freemarker Template Language expression.
+	 */
+    void setCriteria(String criteria);
+    
+    /**
+	 * Gets the criteria for triggering auto-authorization. May be 
+	 * <code>null</code>, which means that auto-authorization will always be 
+	 * triggered when requested. The criteria are expressed as Freemarker 
+	 * Template Language expression
+	 * @return the criteria expression string.
+	 */
+	String getCriteria();
+    
+
     /**
      * Sets the name of the template.
      * 
